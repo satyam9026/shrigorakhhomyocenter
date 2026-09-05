@@ -1,0 +1,892 @@
+    * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b131e;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #0b131e;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+            z-index: 10;
+        }
+
+        .brand-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-wrapper {
+            width: 50px;
+            height: 50px;
+            min-width: 50px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .logo-wrapper img {
+            width:62px;
+            height: 62px;
+            object-fit: contain;
+        }
+
+        .brand-text h1 {
+            font-family: 'Playfair Display', serif;
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .brand-text p {
+            color: #00b074;
+            font-size: 13px;
+            font-weight: 500;
+            margin-top: 2px;
+            line-height: 1.3;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #e2e8f0;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: #00b074;
+        }
+
+        .btn-call {
+            background-color: #00b074;
+            color: #ffffff;
+            border: none;
+            padding: 10px 24px;
+            font-size: 16px;
+            font-weight: 500;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-call:hover {
+            background-color: #009662;
+        }
+
+        /* Mobile Toggle Button */
+        .menu-toggle {
+            display: none;
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            width: 46px;
+            height: 46px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background-color: #ffffff;
+            transition: all 0.3s ease;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .menu-toggle.active span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
+        /* Mobile Dropdown Menu */
+        .mobile-dropdown {
+            display: none;
+            flex-direction: column;
+            background-color: #0b131e;
+            padding: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            gap: 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .mobile-dropdown.active {
+            display: flex;
+        }
+
+        .mobile-dropdown a.nav-item {
+            text-decoration: none;
+            color: #e2e8f0;
+            font-size: 18px;
+        }
+
+        .mobile-dropdown .btn-call {
+            text-align: center;
+            width: 100%;
+            padding: 14px;
+        }
+
+        /* Hero Section Styles */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            min-height: calc(100vh - 82px);
+            background-image: url('/image/hero-homeopathy-vials.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            padding: 60px 0;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                rgba(238, 246, 242, 0.98) 0%, 
+                rgba(238, 246, 242, 0.95) 14%, 
+                rgba(238, 246, 242, 0.5) 38%, 
+                rgba(238, 246, 242, 0.1) 75%);
+            z-index: 1;
+        }
+
+        .hero-container {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px;
+            width: 100%;
+        }
+
+        .hero-content {
+            max-width: 580px;
+        }
+
+        .hero-subtitle-top {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 2px;
+        }
+
+        .hero-doctor-name {
+            font-size: 13px;
+            font-weight: 500;
+            color: #4b5563;
+            margin-bottom: 24px;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 44px;
+            font-weight: 700;
+            color: #111827;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .hero-description {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #374151;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 45px;
+            flex-wrap: wrap;
+        }
+
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 24px;
+            font-size: 16px;
+            font-weight: 500;
+            border-radius: 8px;
+            text-decoration: none;
+            background-color: #ffffff;
+            color: #00a86b;
+            border: 1px solid #00a86b;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #f0fdf4;
+        }
+
+        /* Stats Box */
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            background: #ffffff;
+            padding: 20px 24px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            width: fit-content;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: #00a86b;
+            line-height: 1.1;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #4b5563;
+            margin-top: 4px;
+            font-weight: 500;
+        }
+
+        /* Floating WhatsApp Icon */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 100;
+            text-decoration: none;
+        }
+
+        .whatsapp-float svg {
+            width: 32px;
+            height: 32px;
+            fill: #ffffff;
+        }
+
+        /* Scoped Styles for the Section */
+        .clinic-sections-wrapper {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f8f6;
+            color: #111827;
+            padding: 60px 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Common Tag & Titles */
+        .section-tag {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: #00a86b;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .section-main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 38px;
+            font-weight: 700;
+            line-height: 1.15;
+            color: #111827;
+            margin-bottom: 20px;
+        }
+
+        .section-main-desc {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #4b5563;
+        }
+
+        /* Why Patients Visit Section layout */
+        .why-visit-container {
+            max-width: 1200px;
+            margin: 0 auto 25px auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .why-visit-right {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .feature-item h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 6px;
+        }
+
+        .feature-item p {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #4b5563;
+        }
+
+        /* Treatments Section Layout */
+        .treatments-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .treatments-header {
+            max-width: 700px;
+            margin-bottom: 40px;
+        }
+
+        /* Treatment Grid Layout */
+        .treatment-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .treatment-card {
+            background: #ffffff;
+            padding: 28px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 168, 107, 0.08);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .treatment-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 168, 107, 0.08);
+        }
+
+        .treatment-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 4px;
+        }
+
+        .hindi-text {
+            font-size: 13px;
+            color: #00a86b;
+            font-weight: 500;
+            margin-bottom: 14px;
+            display: block;
+        }
+
+        .treatment-card p {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #4b5563;
+            margin-bottom: 20px;
+        }
+
+        .learn-more-link {
+            font-size: 14px;
+            font-weight: 600;
+            color: #00a86b;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: auto;
+        }
+
+        .learn-more-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Scoped Container Styles for Complete Section */
+        .clinic-complete-section {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f8f6;
+            color: #111827;
+            padding: 60px 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* 1. Locations Styling */
+        .locations-wrapper {
+            max-width: 1200px;
+            margin: 0 auto 80px auto;
+        }
+
+        .location-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .location-card {
+            background: #ffffff;
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 168, 107, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-tag {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: #00a86b;
+            margin-bottom: 8px;
+        }
+
+        .location-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 12px;
+        }
+
+        .address-text {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #4b5563;
+            margin-bottom: 20px;
+        }
+
+        .phone-link {
+            font-size: 15px;
+            font-weight: 600;
+            color: #00a86b;
+            text-decoration: none;
+            margin-bottom: 16px;
+            display: inline-block;
+        }
+
+        .details-link {
+            font-size: 14px;
+            font-weight: 600;
+            color: #00a86b;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: auto;
+        }
+
+        .details-link:hover, .phone-link:hover {
+            text-decoration: underline;
+        }
+
+        /* 2. FAQ Styling */
+        .faq-wrapper {
+            max-width: 1200px;
+            margin: 0 auto 80px auto;
+            border-top: 1px solid #e5e7eb;
+            padding-top: 60px;
+        }
+
+        .faq-main-title {
+            margin-bottom: 40px;
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 24px;
+        }
+
+        .faq-item h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 8px;
+        }
+
+        .faq-item p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #4b5563;
+        }
+
+        /* 3. CTA Banner Styling */
+        .cta-banner {
+            max-width: 1200px;
+            margin: 0 auto;
+            border-top: 1px solid #e5e7eb;
+            padding-top: 60px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            font-size: 15px;
+            font-weight: 500;
+            border-radius: 8px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .cta-banner .btn-call {
+            background-color: #00a86b;
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(0, 168, 107, 0.2);
+        }
+
+        .cta-banner .btn-call:hover {
+            background-color: #008f5a;
+        }
+
+        .cta-banner .btn-whatsapp {
+            background-color: #ffffff;
+            color: #00a86b;
+            border: 1px solid #00a86b;
+        }
+
+        .cta-banner .btn-whatsapp:hover {
+            background-color: #f0fdf4;
+        }
+
+        /* Scoped CSS for Footer */
+        .site-footer {
+            background-color: #0b131e;
+            color: #94a3b8;
+            font-family: 'Inter', sans-serif;
+            padding: 70px 20px 30px;
+            position: relative;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .footer-logo-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .footer-logo-icon {
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer-brand-text h3 {
+            font-family: 'Playfair Display', serif;
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .footer-brand-text span {
+            color: #00b074;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .footer-desc {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #cbd5e1;
+            max-width: 280px;
+        }
+
+        .footer-phone {
+            color: #00b074;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .footer-heading {
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #00b074;
+        }
+
+        .clinic-location {
+            margin-bottom: 20px;
+        }
+
+        .clinic-location h4 {
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .clinic-location p {
+            font-size: 13px;
+            line-height: 1.5;
+            color: #94a3b8;
+        }
+
+        .footer-divider {
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.08);
+            margin: 40px 0 30px;
+        }
+
+        .footer-disclaimer {
+            font-size: 12px;
+            line-height: 1.6;
+            color: #64748b;
+            margin-bottom: 30px;
+        }
+
+        .footer-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .copyright p {
+            font-size: 13px;
+            color: #cbd5e1;
+            margin-bottom: 4px;
+        }
+
+        .credit {
+            font-size: 12px;
+            color: #64748b;
+        }
+
+        .text-green {
+            color: #00b074;
+            text-decoration: none;
+        }
+
+        .bottom-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .bottom-links a {
+            color: #cbd5e1;
+            font-size: 13px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .bottom-links a:hover {
+            color: #00b074;
+        }
+
+        /* Responsive Media Query for Mobile (max-width: 768px) */
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 20px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .brand-text h1 {
+                font-size: 16px;
+                max-width: 170px;
+            }
+
+            .brand-text p {
+                font-size: 11px;
+                max-width: 175px;
+            }
+
+            .hero-section {
+                background-position: 75% center;
+                padding: 30px 0;
+            }
+
+            .hero-container {
+                padding: 0 20px;
+            }
+
+            .hero-title {
+                font-size: 32px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .hero-buttons .btn-call, .hero-buttons .btn-whatsapp {
+                width: 100%;
+                text-align: center;
+            }
+
+            .hero-stats {
+                width: 100%;
+                justify-content: space-between;
+                gap: 10px;
+                padding: 16px;
+            }
+
+            .stat-number {
+                font-size: 22px;
+            }
+
+            .why-visit-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .treatment-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-main-title {
+                font-size: 28px;
+            }
+
+            .location-cards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .cta-buttons .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .clinic-complete-section, .clinic-sections-wrapper {
+                padding: 40px 16px;
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+            
+            .footer-meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+            .site-footer {
+                padding: 50px 20px 80px;
+            }
+        }

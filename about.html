@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shri Gorakh Homyo Center</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+<div class="brand-container">
+            <div class="logo-wrapper">
+                <a href="index.html">
+                    <img src="image/logo.png" alt="Clinic Logo">
+                </a>
+            </div>
+            <div class="brand-text">
+                <h1>Shri Gorakh Homyo Center</h1>
+                <p>Dr. Vivek Mishra - Classical Homeopath</p>
+            </div>
+        </div>
+
+        <nav class="nav-links">
+            <a href="treatments.html">Treatments</a>
+            <a href="locations.html">Locations</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="tel:+917617060709" class="btn-call">Call</a>
+        </nav>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <div class="mobile-dropdown" id="mobileDropdown">
+        <a href="treatments.html" class="nav-item">Treatments</a>
+        <a href="locations.html" class="nav-item">Locations</a>
+        <a href="about.html" class="nav-item">About</a>
+        <a href="contact.html" class="nav-item">Contact</a>
+        <a href="tel:+917617060709" class="btn-call">Call +91 76170 60709</a>
+    </div>
+
+    <div class="about-page-wrapper">
+        <div class="about-content-container">
+            
+            <div class="about-header-flex">
+                <div class="about-logo-badge">
+                    <img src="image/logo.png" width="32" height="32" alt="Logo">
+                </div>
+                <div>
+                    <span class="section-tag">ABOUT</span>
+                    <h2 class="section-main-title">Dr. Vivek Mishra</h2>
+                    <p class="section-subtitle">Classical Homeopath</p>
+                </div>
+            </div>
+
+            <div class="about-text-body">
+                <p>
+                    Dr. Vivek Mishra practises classical homeopathy at Shri Gorakh Homyo Center in Gorakhpur. Care starts with careful listening and whole-person case-taking for individuals and families.
+                </p>
+                <p>
+                    Qualified with a B.H.M.S from State K.G.K. Homeopathic Medical College & Hospital, Moradabad, Uttar Pradesh, Dr. Vivek Mishra also holds DAFE from Delhi and MPH (CM).
+                </p>
+                <p>
+                    Remedies are chosen for the person, not only the disease name. Each consultation reviews symptoms, lifestyle, and history so treatment can support lasting improvement—not short-term cover alone.
+                </p>
+                <p>
+                    Shri Gorakh Homyo Center—Dr. Vivek Mishra - Classical Homeopath—welcomes new patients seeking gentle, natural care for chronic and recurring health concerns. Visit our <a href="#gorakhpur" class="inline-link">Gorakhpur</a> clinic near Gorakhpur Library, Rustampur Dhala, Azad Nagar Colony.
+                </p>
+            </div>
+
+            <div class="about-action-buttons">
+                <a href="tel:+917617060709" class="btn btn-call">Call +91 76170 60709</a>
+                <a href="https://wa.me/917617060709" class="btn btn-whatsapp" target="_blank">WhatsApp</a>
+            </div>
+
+            <div class="about-divider"></div>
+
+            <div class="promise-section">
+                <h3 class="promise-title">Our promise</h3>
+                <ul class="promise-list">
+                    <li>
+                        <strong>Listen first</strong>—your story guides the prescription.
+                    </li>
+                    <li>
+                        <strong>Explain clearly</strong>—what to expect and when to seek urgent care.
+                    </li>
+                    <li>
+                        <strong>Stay accessible</strong>—dedicated phone and WhatsApp support for our clinic.
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+<style>
+    /* Scoped CSS for About Section */
+    .about-page-wrapper {
+        font-family: 'Inter', sans-serif;
+        background-color: #f4f8f6;
+        color: #111827;
+        padding: 60px 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .about-content-container {
+        max-width: 850px;
+        margin: 0 auto;
+    }
+
+    .about-header-flex {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 30px;
+    }
+
+    .about-logo-badge {
+        width: 60px;
+        height: 60px;
+        min-width: 60px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(0, 168, 107, 0.1);
+    }
+
+    .section-tag {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        color: #00a86b;
+        margin-bottom: 4px;
+        text-transform: uppercase;
+    }
+
+    .section-main-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 36px;
+        font-weight: 700;
+        color: #111827;
+        line-height: 1.15;
+    }
+
+    .section-subtitle {
+        font-size: 15px;
+        color: #4b5563;
+        font-weight: 500;
+        margin-top: 2px;
+    }
+
+    .about-text-body {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-size: 15px;
+        line-height: 1.7;
+        color: #374151;
+        margin-bottom: 35px;
+    }
+
+    .inline-link {
+        color: #00a86b;
+        text-decoration: underline;
+        font-weight: 500;
+    }
+
+    .inline-link:hover {
+        color: #008f5a;
+    }
+
+    .about-action-buttons {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 24px;
+        font-size: 15px;
+        font-weight: 500;
+        border-radius: 8px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .btn-call {
+        background-color: #00a86b;
+        color: #ffffff;
+        box-shadow: 0 4px 12px rgba(0, 168, 107, 0.2);
+    }
+
+    .btn-call:hover {
+        background-color: #008f5a;
+    }
+
+    .btn-whatsapp {
+        background-color: #ffffff;
+        color: #00a86b;
+        border: 1px solid #00a86b;
+    }
+
+    .btn-whatsapp:hover {
+        background-color: #f0fdf4;
+    }
+
+    .about-divider {
+        height: 1px;
+        background-color: #e5e7eb;
+        margin-bottom: 40px;
+    }
+
+    .promise-section {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .promise-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 26px;
+        font-weight: 700;
+        color: #111827;
+        margin-bottom: 4px;
+    }
+
+    .promise-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .promise-list li {
+        font-size: 15px;
+        line-height: 1.6;
+        color: #374151;
+    }
+
+    .promise-list li strong {
+        color: #111827;
+        font-weight: 600;
+    }
+
+    /* Responsive Media Queries */
+    @media (max-width: 768px) {
+        .section-main-title {
+            font-size: 28px;
+        }
+
+        .about-action-buttons {
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn {
+            width: 100%;
+            text-align: center;
+        }
+
+        .about-page-wrapper {
+            padding: 40px 16px;
+        }
+    }
+</style>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            
+            <div class="footer-top">
+                
+                <div class="footer-brand">
+                    <div class="footer-logo-row">
+                        <div class="footer-logo-icon">
+                            <svg viewBox='0 0 24 24' fill='none' stroke='#000000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg' width="26" height="26"><path d='M12 2a4 4 0 0 0-4 4c0 1.5.8 2.8 2 3.5V11a2 2 0 0 0-2 2v2a3 3 0 0 0 3 3h2a3 3 0 0 0 3-3v-2a2 2 0 0 0-2-2v-1.5c1.2-.7 2-2 2-3.5a4 4 0 0 0-4-4z'/><path d='M7 16c-2 1-3 3-3 5h16c0-2-1-4-3-5'/></svg>
+                        </div>
+                        <div class="footer-brand-text">
+                            <h3>Shri Gorakh Homyo Center</h3>
+                            <span>Dr. Vivek Mishra - Classical Homeopath</span>
+                        </div>
+                    </div>
+                    <p class="footer-desc">Gentle, personalized homeopathy for lasting wellness. Clinic in Gorakhpur.</p>
+                    <a href="tel:+917617060709" class="footer-phone">+91 76170 60709</a>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="treatments.html">Treatments</a></li>
+                        <li><a href="locations.html">Locations</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Treatments</h4>
+                    <ul class="footer-links">
+                        <li><a href="treatments.html">Kidney & urinary</a></li>
+                        <li><a href="treatments.html">Skin & hair</a></li>
+                        <li><a href="treatments.html">Respiratory & allergy</a></li>
+                        <li><a href="treatments.html">Digestive</a></li>
+                        <li><a href="treatments.html">Joints & bones</a></li>
+                        <li><a href="treatments.html">Women's health</a></li>
+                        <li><a href="treatments.html">Men's health</a></li>
+                        <li><a href="treatments.html">Children's health</a></li>
+                        <li><a href="treatments.html">Mind & nerves</a></li>
+                        <li><a href="treatments.html">Lifestyle & metabolic</a></li>
+                        <li><a href="treatments.html">Heart & cardiovascular</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Clinics</h4>
+                    <div class="clinic-location">
+                        <h4>Gorakhpur</h4>
+                        <p>Nearest Gorakhpur Library, Rustampur Dhala, Azad Nagar Colony, Gorakhpur 273016</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <div class="footer-bottom">
+                <p class="footer-disclaimer">
+                    Every patient is unique. Treatment and recovery may vary depending on individual health and response to homeopathic medicines. This site is educational and does not replace a personal consultation. Please call or WhatsApp to book an evaluation. Seek emergency care for severe or sudden symptoms.
+                </p>
+                
+                <div class="footer-meta">
+                    <div class="copyright">
+                        <p>&copy; <span id="currentYear">2026</span> Shri Gorakh Homyo Center. All rights reserved.</p>
+                    </div>
+                    
+                    <div class="bottom-links">
+                        <a href="about.html">Privacy</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="about.html">About</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <a href="https://wa.me/917617060709" class="whatsapp-float" target="_blank" aria-label="WhatsApp Chat">
+        <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.198-.198.347-.764.967-.937 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    </a>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Auto-update copyright year
+            const yearElement = document.getElementById("currentYear");
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear(); 
+            }
+
+            // Mobile menu toggle functionality
+            const menuToggle = document.getElementById('menuToggle');
+            const mobileDropdown = document.getElementById('mobileDropdown');
+
+            if (menuToggle && mobileDropdown) {
+                menuToggle.addEventListener('click', () => {
+                    menuToggle.classList.toggle('active');
+                    mobileDropdown.classList.toggle('active');
+                });
+
+                // Close mobile dropdown when a link inside it is clicked
+                mobileDropdown.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        menuToggle.classList.remove('active');
+                        mobileDropdown.classList.remove('active');
+                    });
+                });
+            }
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    
+                    const target = document.querySelector(targetId);
+                    if(target) {
+                        e.preventDefault();
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
